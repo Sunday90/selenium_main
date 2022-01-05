@@ -8,7 +8,7 @@ import java.io.File;
 
 public class DriverFactory {
     private static WebDriver driver;
-    private static final String DRIVER_PATH = "src/test/resources";
+    private static final String DRIVER_PATH = "src/test/resources/";
     private static File file;
 
     public static WebDriver getDriver(Browser browser) {
