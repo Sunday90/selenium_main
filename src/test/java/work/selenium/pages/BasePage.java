@@ -16,7 +16,7 @@ public abstract class BasePage {
 
     public BasePage() {
         this.driver = BaseTest.getDriver();
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(7));
         this.builder = new Actions(driver);
         PageFactory.initElements(driver, this);
     }
