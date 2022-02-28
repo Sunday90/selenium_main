@@ -2,7 +2,10 @@ package work.selenium.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
+import org.testng.asserts.SoftAssert;
 import work.selenium.utils.DriverFactory;
 import work.selenium.utils.PropertyReader;
 
@@ -15,7 +18,7 @@ public abstract class BaseTest {
         return driver;
     }
 
-    @BeforeClass
+    @BeforeSuite
     public void setUp() {
         driver = DriverFactory.getDriver(PropertyReader.getBrowser());
 
@@ -25,7 +28,7 @@ public abstract class BaseTest {
     }
 
 
-    @AfterClass
+    @AfterSuite
     public void tearDown() {
         driver.quit();
     }

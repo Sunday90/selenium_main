@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.asserts.SoftAssert;
 import work.selenium.tests.BaseTest;
 
 import javax.swing.*;
@@ -13,6 +14,7 @@ public abstract class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions builder;
+    protected static SoftAssert softAssert;
 
     public BasePage() {
         this.driver = BaseTest.getDriver();

@@ -1,6 +1,7 @@
 package work.selenium.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import work.selenium.steps.StartPageSteps;
 import work.selenium.steps.TasksPageSteps;
@@ -13,24 +14,21 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class LoginTest extends BaseTest {
-    @Test(priority = 0)
+    StartPageSteps steps;
+
+
+    @BeforeClass
+    public void beforeClassMethod() {
+        steps = new StartPageSteps();
+    }
+
+    @Test
     public void testLogin() {
-        new StartPageSteps().openLoginPage()
+        steps.openLoginPage()
                 .login("konstantin.plisov@softline.com", "123123")
                 .verifyThatLogonSuccessful();
     }
 
-    @Test(priority = 1)
-    public void testThatTaskCreated() {
-        new TasksPageSteps().createTask("Task1")
-                .verifyThatTaskCreated();
-    }
-
-    @Test(priority = 2)
-    public void testThatTaskDateIsEmpty() {
-        new TasksPageSteps().createTask("Task1")
-                .verifyThatTaskDateIsEmpty();
-    }
 
 
     //Скачивание файла
