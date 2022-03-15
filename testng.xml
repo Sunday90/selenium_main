@@ -2,8 +2,8 @@
 <suite name="All tests">
     <test name="Base tests" preserve-order="true">
         <classes>
-        <class name="work.selenium.tests.LoginTest"></class>
-        <class name="work.selenium.tests.TasksTest"></class>
+            <class name="work.selenium.tests.LoginTest"></class>
+            <class name="work.selenium.tests.TasksTest"></class>
         </classes>
     </test>
 </suite>

@@ -6,7 +6,13 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 public class TasksPage extends BasePage {
@@ -88,12 +94,10 @@ public class TasksPage extends BasePage {
     @FindBy(xpath = "//div[contains(@class, 'AssignedUser_container')]//div[contains(@class, 'AssignedUser_name')]")
     WebElement assignedUserControl;
 
-    //Имя юзера
     public String getAssignedUserName() {
         return assignedUserControl.getText();
     }
 
-    //Нажать на контрол выбора сотрудника
     public void clickToAssignedUserControl() {
         assignedUserControl.click();
     }
@@ -103,7 +107,6 @@ public class TasksPage extends BasePage {
     @FindBy(xpath = "//input[contains(@id, 'searchinput')]")
     WebElement searchAssignedUserInput;
 
-    //Заполнить поле поиска по сотрудникам
     public void fillSearchAssignedUserInput(String text) {
         searchAssignedUserInput.sendKeys(text);
     }
@@ -129,7 +132,6 @@ public class TasksPage extends BasePage {
         wait.until(ExpectedConditions.invisibilityOf(findUsersLoader));
     }
 
-
     //Найдены ли сотрудники
     public boolean areUsersFound() {
         return usersControls.isEmpty();
@@ -144,14 +146,24 @@ public class TasksPage extends BasePage {
     }
 
 
-    // Выбранный срок задачи
+
+    //Блок с выбором срока задачи
+    // Выбранный срок задачи в карточке
     @FindBy(xpath = "//div[contains(@class, 'TaskCard_container')]//span[contains(@class, 'TaskDate_date_text')][1]")
     WebElement taskDate;
 
-    //Дата
     public String getTaskDate() {
         return taskDate.getText().trim();
     }
+
+    public void clickToTaskDateControl() {
+        taskDate.click();
+    }
+
+
+    
+
+
 
 
     //Кнопка добавить наблюдаталей

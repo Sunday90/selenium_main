@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class PropertyReader {
+    private static String pathToPropertiesFile = "src/test/resources/framework.properties";
 
     public static String getBaseUrl() {
         return getProperty("url");
@@ -29,7 +30,7 @@ public class PropertyReader {
         InputStream inputStream = null;
 
         try {
-            inputStream = new FileInputStream("src/test/resources/framework.properties");
+            inputStream = new FileInputStream(pathToPropertiesFile);
             prop.load(inputStream);
         } catch (IOException e) {
             System.out.println("Cannot read property value for " + propertyName);
