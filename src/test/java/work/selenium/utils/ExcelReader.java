@@ -13,7 +13,7 @@ import java.io.InputStream;
 
 public class ExcelReader {
     private static XSSFSheet sheet;
-    private static String pathToExcelFile = "/testdata.xlsx";  //Файл Excel с данными
+    private static final String pathToExcelFile = "src/test/resources/testdata.xlsx";  //Файл Excel с данными
 
     //Выбор вкладки в Excel файле
     public static void setExcelSheet(String sheetName) {
@@ -45,7 +45,7 @@ public class ExcelReader {
         testData = new String[endRow - startRow + 1][endCol - startCol + 1];
 
         for (int i = startRow; i < endRow + 1; i++) {
-            for (int j = startCol; i < endCol + 1; j++) {
+            for (int j = startCol; j < endCol + 1; j++) {
                 Cell cell = sheet.getRow(i).getCell(j);
                 testData[i - startRow][j - startCol] = formatter.formatCellValue(cell);
             }

@@ -1,30 +1,29 @@
 package work.selenium.pages;
 
-import jdk.swing.interop.SwingInterOpUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.Screenshot;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-import javax.imageio.ImageIO;
-import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
 public class TasksPage extends BasePage {
 
     //Верхний блок
     //Аватар сотрудника
-    @FindBy(xpath = "//img[contains(@class, 'Avatar_photo')]")
-    List<WebElement> avatarImgs;
+    @FindBy(xpath = "//div[contains(@class, 'TopMenu_avatar')]")
+    WebElement avatarImg;
 
-    public boolean areAvatarsDisplayed() {
-        return !avatarImgs.isEmpty();
+    public boolean isAvatarDisplayed() {
+        try {
+            return avatarImg.isDisplayed();
+        }
+        catch (Exception e) {
+            return false;
+        }
     }
+
 
 
     //Левый блок
@@ -32,7 +31,6 @@ public class TasksPage extends BasePage {
     @FindBy(xpath = "//div[@class='TasksMenu_start_process_oopKX']/button")
     WebElement startProcessBtn;
 
-    //Нажатие на кнопку Запустить процесс
     public void clickToStartProcessButton() {
         startProcessBtn.click();
     }
@@ -42,10 +40,19 @@ public class TasksPage extends BasePage {
     @FindBy(xpath = "//div[@class='TasksMenu_container_ZlIEU']/button")
     WebElement createTaskBtn;
 
-    //Нажатие на кнопку Создать задачу
     public void clickToCreateTaskButton() {
         createTaskBtn.click();
     }
+
+
+    //Кнопка Выйти
+    @FindBy(xpath = "//div[contains(@class, 'BottomMenu_menu')]//div[contains(text(), 'Выйти')]")
+    WebElement leftBottomMenuItems;
+
+    public void clickToExitButton() {
+        leftBottomMenuItems.click();
+    }
+
 
 
     //Блок с задачей

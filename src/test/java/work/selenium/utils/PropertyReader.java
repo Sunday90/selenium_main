@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class PropertyReader {
-    private static String pathToPropertiesFile = "src/test/resources/framework.properties";
+    private static final String pathToPropertiesFile = "src/test/resources/framework.properties";
 
     public static String getBaseUrl() {
         return getProperty("url");

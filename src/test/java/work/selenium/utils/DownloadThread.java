@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 public class DownloadThread implements Callable<HashMap<String, Long>> {
-    private String fileUrl;
-    private String wgetCommand;
+    private final String fileUrl;
+    private final String wgetCommand;
 
 
     public DownloadThread (String fileUrl) {

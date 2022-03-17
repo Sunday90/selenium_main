@@ -5,12 +5,18 @@ import org.testng.asserts.SoftAssert;
 import work.selenium.pages.TasksPage;
 
 public class TasksPageSteps extends BasePageSteps{
-    private TasksPage tasksPage = new TasksPage();
+    private final TasksPage tasksPage = new TasksPage();
 
     //Если появился аватар, значит сотрудник залогинился
     public TasksPageSteps verifyThatLogonSuccessful() {
-        Assert.assertTrue(tasksPage.areAvatarsDisplayed());
+        Assert.assertTrue(tasksPage.isAvatarDisplayed());
         return this;
+    }
+
+    //Выход из аккаунта
+    public LoginPageSteps logout() {
+        tasksPage.clickToExitButton();
+        return new LoginPageSteps();
     }
 
     //Задача создана если появилась надпись что она создана и появилось поле комментария

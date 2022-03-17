@@ -22,7 +22,7 @@ public abstract class BaseTest {
 
 
     @BeforeSuite
-    public void setUp() {
+    public static void setUp() {
         driver = DriverFactory.getDriver(PropertyReader.getBrowser());
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
@@ -31,8 +31,8 @@ public abstract class BaseTest {
 
 
     @AfterMethod
-    public void afterMethod(ITestResult testResult) {
-        if(testResult.getStatus() == ITestResult.FAILURE) {
+    public static void afterMethod(ITestResult testResult) {
+        if (testResult.getStatus() == ITestResult.FAILURE) {
             SimpleDateFormat formatter = new SimpleDateFormat("MM.dd HH-mm-ss");
             String fileName = String.format("%s_%s", testResult.getName(), formatter.format(new Date()));
 
@@ -41,7 +41,9 @@ public abstract class BaseTest {
     }
 
     @AfterSuite
-    public void tearDown() {
-        driver.quit();
+    public static void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }

@@ -1,0 +1,10 @@
+   //Скачивание файла
+   @Test
+    public void testDownload() throws ExecutionException, InterruptedException {
+        ExecutorService executorService = Executors.newFixedThreadPool(1);
+        Future<HashMap<String, Long>> future = executorService.submit(new DownloadThread("https://www.7-zip.org/a/7z2107-x64.exe"));
+
+        Assert.assertTrue(future.get().get("7z2107-x64.exe") == 1533613L);
+
+      executorService.shutdown();
+    }

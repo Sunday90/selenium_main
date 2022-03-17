@@ -3,7 +3,7 @@ package work.selenium.steps;
 import work.selenium.pages.LoginPage;
 
 public class LoginPageSteps {
-private LoginPage loginPage = new LoginPage();
+private final LoginPage loginPage = new LoginPage();
 
     public TasksPageSteps login(String email, String password) {
         loginPage.fillEmailInput(email);
@@ -12,4 +12,5 @@ private LoginPage loginPage = new LoginPage();
         loginPage.clickToSecondLoginButton();
         return new TasksPageSteps();
     }
+
 }
