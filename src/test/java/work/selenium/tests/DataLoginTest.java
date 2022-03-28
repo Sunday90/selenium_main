@@ -1,9 +1,6 @@
 package work.selenium.tests;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import work.selenium.steps.StartPageSteps;
 import work.selenium.utils.ExcelReader;
 
@@ -17,9 +14,10 @@ public class DataLoginTest {
     }
 
 
+    @Parameters({"platform", "browser", "version", "url"})
     @BeforeMethod
-    public void beforeMethod() {
-        BaseTest.setUp();
+    public void beforeMethod(String platform, String browser, String version, String url) {
+        BaseTest.setUp(platform, browser, version, url, Boolean.toString(true));
         steps = new StartPageSteps();
     }
 

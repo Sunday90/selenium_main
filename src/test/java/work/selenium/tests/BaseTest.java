@@ -21,15 +21,21 @@ public abstract class BaseTest {
     }
 
 
+    @Parameters({"platform", "browser", "version", "url", "local"})
     @BeforeSuite
-    public static void setUp() {
-        driver = DriverFactory.getDriver(PropertyReader.getBrowser());
+    public static void setUp(String platform, String browser, String version, String url, String local) {
+        if (Boolean.valueOf(local) == true) {
+            driver = DriverFactory.getLocalDriver(browser);
+        } else {
+            driver = DriverFactory.getRemoteDriver(platform, browser, version);
+        }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
-        driver.get(PropertyReader.getBaseUrl());
+        driver.get(url);
     }
 
 
+    //Скриншот если тест провален
     @AfterMethod
     public static void afterMethod(ITestResult testResult) {
         if (testResult.getStatus() == ITestResult.FAILURE) {
