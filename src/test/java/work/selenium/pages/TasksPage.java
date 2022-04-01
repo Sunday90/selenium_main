@@ -16,12 +16,7 @@ public class TasksPage extends BasePage {
     WebElement avatarImg;
 
     public boolean isAvatarDisplayed() {
-        try {
-            return avatarImg.isDisplayed();
-        }
-        catch (Exception e) {
-            return false;
-        }
+        return isElementVisible(avatarImg);
     }
 
 
@@ -65,7 +60,7 @@ public class TasksPage extends BasePage {
     }
 
     public void waitWhenCreatedTextBlockIsInvisible() {
-        wait.until(ExpectedConditions.invisibilityOf(taskCreatedText));
+        waitElementToBeVisible.until(ExpectedConditions.invisibilityOf(taskCreatedText));
     }
 
 
@@ -135,8 +130,8 @@ public class TasksPage extends BasePage {
 
     //Ждем пока сработает загрузка поиска
     public void waitFindUsersLoaderWork() {
-        wait.until(ExpectedConditions.visibilityOf(findUsersLoader));
-        wait.until(ExpectedConditions.invisibilityOf(findUsersLoader));
+        waitElementToBeVisible.until(ExpectedConditions.visibilityOf(findUsersLoader));
+        waitElementToBeVisible.until(ExpectedConditions.invisibilityOf(findUsersLoader));
     }
 
     //Найдены ли сотрудники

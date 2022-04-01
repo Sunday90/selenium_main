@@ -20,17 +20,14 @@ public class DriverFactory {
     private static File file;
 
     public static WebDriver getRemoteDriver(String platform, String browser, String version) {
-//        FirefoxOptions options = new FirefoxOptions();
-//        options.setCapability("platformName", platform);
-//        options.setCapability("browserName", browser);
-////        options.setCapability("browserVersion", version);
-////        options.setBinary("C:\\selenium-grid\\");
-        DesiredCapabilities cap = new DesiredCapabilities();
-        cap.setBrowserName("firefox");
-        cap.setPlatform(Platform.WIN10);
+        FirefoxOptions options = new FirefoxOptions();
+        options.setCapability("platformName", platform);
+        options.setCapability("browserName", browser);
+        options.setCapability("browserVersion", version);
+        options.setBinary("C:\\selenium-grid\\");
 
         try {
-            driver = new RemoteWebDriver(new URL("http://192.168.0.9:4444/wd/hub"), cap);
+            driver = new RemoteWebDriver(new URL("http://192.168.0.9:4444/wd/hub"), options);
         }
         catch (MalformedURLException e) {
             e.printStackTrace();

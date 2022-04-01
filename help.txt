@@ -1,3 +1,31 @@
+Project consists of 3 parts and utils:
+1. Pages classes, base class is BasePage.
+2. Tests classes, base class is BaseTest.
+3. Steps classes, base class is BasePageSteps.
+
+
+Pages contains WebElements with @FindBy annotations and methods to work with them.
+BasePage class contains:
+1. Initialization WebElements in init() method (Page Factory).
+2. Explicit wait object, time of waiting is in Constants class.
+3. WebDriver object, class get it from BaseTest class (because driver must be configured in BeforeSuite method.
+4. Actions class for advanced actions with WebElements.
+5. Methods for work with WebElements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    //Скачивание файла
    @Test
     public void testDownload() throws ExecutionException, InterruptedException {

@@ -3,14 +3,12 @@ package work.selenium.tests;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-import org.testng.asserts.SoftAssert;
+import work.selenium.utils.Constants;
 import work.selenium.utils.DriverFactory;
-import work.selenium.utils.PropertyReader;
 import work.selenium.utils.ScreenshotUtil;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.time.LocalDate;
 import java.util.Date;
 
 public abstract class BaseTest {
@@ -29,7 +27,7 @@ public abstract class BaseTest {
         } else {
             driver = DriverFactory.getRemoteDriver(platform, browser, version);
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.IMPLICIT_WAIT_TIME));
         driver.manage().window().maximize();
         driver.get(url);
     }

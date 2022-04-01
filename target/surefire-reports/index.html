@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-All_tests" class="navigator-link">
+              <span class="suite-name border-failed">All tests</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-All_tests" class="navigator-link ">
+                    <span>C:\Users\User\IdeaProjects\selenium_main\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-All_tests" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-All_tests" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-All_tests" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-All_tests" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-All_tests" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-All_tests" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">4 methods, 2 failed,  2 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-All_tests" class="hide-methods failed suite-All_tests"> (hide)</a> <!-- hide-methods failed suite-All_tests -->
+                      <a href="#" panel-name="suite-All_tests" class="show-methods failed suite-All_tests"> (show)</a> <!-- show-methods failed suite-All_tests -->
+                    </span>
+                    <div class="method-list-content failed suite-All_tests">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_tests" title="work.selenium.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin">testLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_tests" title="work.selenium.tests.TasksTest" class="method navigator-link" hash-for-method="testThatTaskCreated">testThatTaskCreated</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-All_tests -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-All_tests" class="hide-methods skipped suite-All_tests"> (hide)</a> <!-- hide-methods skipped suite-All_tests -->
+                      <a href="#" panel-name="suite-All_tests" class="show-methods skipped suite-All_tests"> (show)</a> <!-- show-methods skipped suite-All_tests -->
+                    </span>
+                    <div class="method-list-content skipped suite-All_tests">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_tests" title="work.selenium.tests.TasksTest" class="method navigator-link" hash-for-method="testThatAssignedUserChangesRight">testThatAssignedUserChangesRight</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_tests" title="work.selenium.tests.TasksTest" class="method navigator-link" hash-for-method="testThatTaskCreatedRight">testThatTaskCreatedRight</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-All_tests -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-All_tests" class="panel All_tests">
+          <div class="suite-All_tests-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">work.selenium.tests.TasksTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testThatTaskCreated">
+                  </a> <!-- testThatTaskCreated -->
+                  <span class="method-name">testThatTaskCreated</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@class=&apos;TasksMenu_container_ZlIEU&apos;]/button
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;DESKTOP-UEQMKFQ&apos;, ip: &apos;192.168.0.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fde45495-be0b-4d7f-8b9a-9d72030e7bd7, findElement {using=xpath, value=//div[@class=&apos;TasksMenu_container_ZlIEU&apos;]/button}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 98.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220322144853, moz:debuggerAddress: localhost:49415, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 15164, moz:profile: C:\Users\User\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), se:cdp: ws://localhost:49415/devtoo..., se:cdpVersion: 85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fde45495-be0b-4d7f-8b9a-9d72030e7bd7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy17.click(Unknown Source)
+	at work.selenium.pages.TasksPage.clickToCreateTaskButton(TasksPage.java:39)
+	at work.selenium.steps.TasksPageSteps.createTask(TasksPageSteps.java:52)
+	at work.selenium.tests.TasksTest.testThatTaskCreated(TasksTest.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_tests-class-failed -->
+          <div class="suite-All_tests-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">work.selenium.tests.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogin">
+                  </a> <!-- testLogin -->
+                  <span class="method-name">testLogin</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@type=&apos;email&apos;]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;DESKTOP-UEQMKFQ&apos;, ip: &apos;192.168.0.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fde45495-be0b-4d7f-8b9a-9d72030e7bd7, findElement {using=xpath, value=//input[@type=&apos;email&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 98.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220322144853, moz:debuggerAddress: localhost:49415, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 15164, moz:profile: C:\Users\User\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), se:cdp: ws://localhost:49415/devtoo..., se:cdpVersion: 85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fde45495-be0b-4d7f-8b9a-9d72030e7bd7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy17.sendKeys(Unknown Source)
+	at work.selenium.pages.LoginPage.fillEmailInput(LoginPage.java:16)
+	at work.selenium.steps.LoginPageSteps.login(LoginPageSteps.java:9)
+	at work.selenium.tests.LoginTest.testLogin(LoginTest.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_tests-class-failed -->
+          <div class="suite-All_tests-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">work.selenium.tests.TasksTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testThatAssignedUserChangesRight">
+                  </a> <!-- testThatAssignedUserChangesRight -->
+                  <span class="method-name">testThatAssignedUserChangesRight</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TasksTest.testThatAssignedUserChangesRight()[pri:0, instance:work.selenium.tests.TasksTest@710d7aff] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testThatTaskCreatedRight">
+                  </a> <!-- testThatTaskCreatedRight -->
+                  <span class="method-name">testThatTaskCreatedRight</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TasksTest.testThatTaskCreatedRight()[pri:0, instance:work.selenium.tests.TasksTest@710d7aff] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_tests-class-skipped -->
+        </div> <!-- panel All_tests -->
+        <div panel-name="test-xml-All_tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\User\IdeaProjects\selenium_main\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;All tests&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+  &lt;parameter name=&quot;version&quot; value=&quot;98&quot;/&gt;
+  &lt;parameter name=&quot;platform&quot; value=&quot;WIN10&quot;/&gt;
+  &lt;parameter name=&quot;url&quot; value=&quot;https://newapp.workflowsoft.com/ru&quot;/&gt;
+  &lt;parameter name=&quot;local&quot; value=&quot;true&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Base tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;work.selenium.tests.LoginTest&quot;/&gt;
+      &lt;class name=&quot;work.selenium.tests.TasksTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Base tests --&gt;
+&lt;/suite&gt; &lt;!-- All tests --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-All_tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for All tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Base tests (2 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-All_tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for All tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-All_tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for All tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_All_tests');
+function tableData_All_tests() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(4);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testLogin')
+data.setCell(0, 2, 'work.selenium.tests.LoginTest')
+data.setCell(0, 3, 1802);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testThatTaskCreated')
+data.setCell(1, 2, 'work.selenium.tests.TasksTest')
+data.setCell(1, 3, 14);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testThatAssignedUserChangesRight')
+data.setCell(2, 2, 'work.selenium.tests.TasksTest')
+data.setCell(2, 3, 0);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testThatTaskCreatedRight')
+data.setCell(3, 2, 'work.selenium.tests.TasksTest')
+data.setCell(3, 3, 0);
+window.suiteTableData['All_tests']= { tableData: data, tableDiv: 'times-div-All_tests'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <div id="times-div-All_tests">
+              </div> <!-- times-div-All_tests -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-All_tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for All tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-All_tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">2 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">work.selenium.tests.TasksTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-All_tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">work.selenium.tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setUp(WIN10, firefox, 98, https://newapp.workflowsoft.com/ru, true)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">11608 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testLogin</span>
+                <span class="method-start">11933 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=testLogin status=FAILURE method=LoginTest.testLogin()[pri:0, instance:work.selenium...)</span>
+                <span class="method-start">13805 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">work.selenium.tests.TasksTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClassMethod</span>
+                <span class="method-start">14374 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testThatTaskCreated</span>
+                <span class="method-start">14392 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=testThatTaskCreated status=FAILURE method=TasksTest.testThatTaskCreated()[pri:0, in...)</span>
+                <span class="method-start">14417 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testThatTaskCreatedRight</span>
+                <span class="method-start">14679 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testThatAssignedUserChangesRight</span>
+                <span class="method-start">14693 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">work.selenium.tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">14774 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
