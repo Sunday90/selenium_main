@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-All_tests" class="navigator-link">
-              <span class="suite-name border-failed">All tests</span>
+              <span class="suite-name border-passed">All tests</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,45 +93,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 2 failed,  2 skipped,  </span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-All_tests" class="hide-methods failed suite-All_tests"> (hide)</a> <!-- hide-methods failed suite-All_tests -->
-                      <a href="#" panel-name="suite-All_tests" class="show-methods failed suite-All_tests"> (show)</a> <!-- show-methods failed suite-All_tests -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-All_tests" class="hide-methods passed suite-All_tests"> (hide)</a> <!-- hide-methods passed suite-All_tests -->
+                      <a href="#" panel-name="suite-All_tests" class="show-methods passed suite-All_tests"> (show)</a> <!-- show-methods passed suite-All_tests -->
                     </span>
-                    <div class="method-list-content failed suite-All_tests">
+                    <div class="method-list-content passed suite-All_tests">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_tests" title="work.selenium.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin">testLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_tests" title="work.selenium.tests.TasksTest" class="method navigator-link" hash-for-method="testThatTaskCreated">testThatTaskCreated</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-All_tests -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-All_tests" class="hide-methods skipped suite-All_tests"> (hide)</a> <!-- hide-methods skipped suite-All_tests -->
-                      <a href="#" panel-name="suite-All_tests" class="show-methods skipped suite-All_tests"> (show)</a> <!-- show-methods skipped suite-All_tests -->
-                    </span>
-                    <div class="method-list-content skipped suite-All_tests">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_tests" title="work.selenium.tests.TasksTest" class="method navigator-link" hash-for-method="testThatAssignedUserChangesRight">testThatAssignedUserChangesRight</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_tests" title="work.selenium.tests.TasksTest" class="method navigator-link" hash-for-method="testThatTaskCreated">testThatTaskCreated</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_tests" title="work.selenium.tests.TasksTest" class="method navigator-link" hash-for-method="testThatTaskCreatedRight">testThatTaskCreatedRight</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-All_tests -->
+                    </div> <!-- method-list-content passed suite-All_tests -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -143,52 +134,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-All_tests" class="panel All_tests">
-          <div class="suite-All_tests-class-failed">
+          <div class="suite-All_tests-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">work.selenium.tests.TasksTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testThatTaskCreated">
-                  </a> <!-- testThatTaskCreated -->
-                  <span class="method-name">testThatTaskCreated</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@class=&apos;TasksMenu_container_ZlIEU&apos;]/button
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;DESKTOP-UEQMKFQ&apos;, ip: &apos;192.168.0.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [fde45495-be0b-4d7f-8b9a-9d72030e7bd7, findElement {using=xpath, value=//div[@class=&apos;TasksMenu_container_ZlIEU&apos;]/button}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 98.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220322144853, moz:debuggerAddress: localhost:49415, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 15164, moz:profile: C:\Users\User\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), se:cdp: ws://localhost:49415/devtoo..., se:cdpVersion: 85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: fde45495-be0b-4d7f-8b9a-9d72030e7bd7
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy17.click(Unknown Source)
-	at work.selenium.pages.TasksPage.clickToCreateTaskButton(TasksPage.java:39)
-	at work.selenium.steps.TasksPageSteps.createTask(TasksPageSteps.java:52)
-	at work.selenium.tests.TasksTest.testThatTaskCreated(TasksTest.java:20)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-All_tests-class-failed -->
-          <div class="suite-All_tests-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">work.selenium.tests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -197,41 +145,13 @@ Session ID: fde45495-be0b-4d7f-8b9a-9d72030e7bd7
                   <a name="testLogin">
                   </a> <!-- testLogin -->
                   <span class="method-name">testLogin</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@type=&apos;email&apos;]
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;DESKTOP-UEQMKFQ&apos;, ip: &apos;192.168.0.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [fde45495-be0b-4d7f-8b9a-9d72030e7bd7, findElement {using=xpath, value=//input[@type=&apos;email&apos;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 98.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220322144853, moz:debuggerAddress: localhost:49415, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 15164, moz:profile: C:\Users\User\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), se:cdp: ws://localhost:49415/devtoo..., se:cdpVersion: 85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: fde45495-be0b-4d7f-8b9a-9d72030e7bd7
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy17.sendKeys(Unknown Source)
-	at work.selenium.pages.LoginPage.fillEmailInput(LoginPage.java:16)
-	at work.selenium.steps.LoginPageSteps.login(LoginPageSteps.java:9)
-	at work.selenium.tests.LoginTest.testLogin(LoginTest.java:20)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-All_tests-class-failed -->
-          <div class="suite-All_tests-class-skipped">
+          </div> <!-- suite-All_tests-class-passed -->
+          <div class="suite-All_tests-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="passed.png"/>
               <span class="class-name">work.selenium.tests.TasksTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -240,10 +160,13 @@ Session ID: fde45495-be0b-4d7f-8b9a-9d72030e7bd7
                   <a name="testThatAssignedUserChangesRight">
                   </a> <!-- testThatAssignedUserChangesRight -->
                   <span class="method-name">testThatAssignedUserChangesRight</span>
-                  <div class="stack-trace">java.lang.Throwable: Method TasksTest.testThatAssignedUserChangesRight()[pri:0, instance:work.selenium.tests.TasksTest@710d7aff] depends on not successfully finished methods
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 22 stack frames
-</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testThatTaskCreated">
+                  </a> <!-- testThatTaskCreated -->
+                  <span class="method-name">testThatTaskCreated</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -251,14 +174,10 @@ Session ID: fde45495-be0b-4d7f-8b9a-9d72030e7bd7
                   <a name="testThatTaskCreatedRight">
                   </a> <!-- testThatTaskCreatedRight -->
                   <span class="method-name">testThatTaskCreatedRight</span>
-                  <div class="stack-trace">java.lang.Throwable: Method TasksTest.testThatTaskCreatedRight()[pri:0, instance:work.selenium.tests.TasksTest@710d7aff] depends on not successfully finished methods
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 22 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-All_tests-class-skipped -->
+          </div> <!-- suite-All_tests-class-passed -->
         </div> <!-- panel All_tests -->
         <div panel-name="test-xml-All_tests" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -269,8 +188,8 @@ Session ID: fde45495-be0b-4d7f-8b9a-9d72030e7bd7
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;All tests&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
-  &lt;parameter name=&quot;version&quot; value=&quot;98&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;version&quot; value=&quot;100&quot;/&gt;
   &lt;parameter name=&quot;platform&quot; value=&quot;WIN10&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://newapp.workflowsoft.com/ru&quot;/&gt;
   &lt;parameter name=&quot;local&quot; value=&quot;true&quot;/&gt;
@@ -321,24 +240,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testLogin')
 data.setCell(0, 2, 'work.selenium.tests.LoginTest')
-data.setCell(0, 3, 1802);
+data.setCell(0, 3, 11136);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testThatTaskCreated')
 data.setCell(1, 2, 'work.selenium.tests.TasksTest')
-data.setCell(1, 3, 14);
+data.setCell(1, 3, 10111);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testThatAssignedUserChangesRight')
 data.setCell(2, 2, 'work.selenium.tests.TasksTest')
-data.setCell(2, 3, 0);
+data.setCell(2, 3, 7117);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'testThatTaskCreatedRight')
 data.setCell(3, 2, 'work.selenium.tests.TasksTest')
-data.setCell(3, 3, 0);
+data.setCell(3, 3, 118);
 window.suiteTableData['All_tests']= { tableData: data, tableDiv: 'times-div-All_tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-All_tests">
               </div> <!-- times-div-All_tests -->
             </div> <!-- times-div -->
@@ -375,54 +294,58 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">work.selenium.tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">setUp(WIN10, firefox, 98, https://newapp.workflowsoft.com/ru, true)</span>
+                <span class="method-name">setUp(WIN10, chrome, 100, https://newapp.workflowsoft.com/ru, true)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">11608 ms</span>
+                <span class="method-start">19797 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testLogin</span>
-                <span class="method-start">11933 ms</span>
+                <span class="method-start">20785 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=testLogin status=FAILURE method=LoginTest.testLogin()[pri:0, instance:work.selenium...)</span>
-                <span class="method-start">13805 ms</span>
+                <span class="method-name">afterMethod([TestResult name=testLogin status=SUCCESS method=LoginTest.testLogin()[pri:0, instance:work.selenium...)</span>
+                <span class="method-start">32019 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">work.selenium.tests.TasksTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClassMethod</span>
-                <span class="method-start">14374 ms</span>
+                <span class="method-start">32037 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testThatTaskCreated</span>
-                <span class="method-start">14392 ms</span>
+                <span class="method-start">32042 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=testThatTaskCreated status=FAILURE method=TasksTest.testThatTaskCreated()[pri:0, in...)</span>
-                <span class="method-start">14417 ms</span>
+                <span class="method-name">afterMethod([TestResult name=testThatTaskCreated status=SUCCESS method=TasksTest.testThatTaskCreated()[pri:0, in...)</span>
+                <span class="method-start">42156 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testThatTaskCreatedRight</span>
-                <span class="method-start">14679 ms</span>
+                <span class="method-start">42167 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=testThatTaskCreatedRight status=SUCCESS method=TasksTest.testThatTaskCreatedRight()...)</span>
+                <span class="method-start">42286 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testThatAssignedUserChangesRight</span>
-                <span class="method-start">14693 ms</span>
+                <span class="method-start">42288 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=testThatAssignedUserChangesRight status=SUCCESS method=TasksTest.testThatAssignedUs...)</span>
+                <span class="method-start">49417 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">work.selenium.tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">14774 ms</span>
+                <span class="method-start">49564 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,28 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 2, Errors: 0, Skipped: 2, Time elapsed: 18.792 s <<< FAILURE! - in TestSuite
-work.selenium.tests.LoginTest.testLogin  Time elapsed: 1.239 s  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-Unable to locate element: //input[@type='email']
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'DESKTOP-UEQMKFQ', ip: '192.168.0.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [fde45495-be0b-4d7f-8b9a-9d72030e7bd7, findElement {using=xpath, value=//input[@type='email']}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 98.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220322144853, moz:debuggerAddress: localhost:49415, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 15164, moz:profile: C:\Users\User\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), se:cdp: ws://localhost:49415/devtoo..., se:cdpVersion: 85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: fde45495-be0b-4d7f-8b9a-9d72030e7bd7
-	at work.selenium.tests.LoginTest.testLogin(LoginTest.java:20)
-
-work.selenium.tests.TasksTest.testThatTaskCreated  Time elapsed: 0.019 s  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-Unable to locate element: //div[@class='TasksMenu_container_ZlIEU']/button
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'DESKTOP-UEQMKFQ', ip: '192.168.0.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [fde45495-be0b-4d7f-8b9a-9d72030e7bd7, findElement {using=xpath, value=//div[@class='TasksMenu_container_ZlIEU']/button}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 98.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220322144853, moz:debuggerAddress: localhost:49415, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 15164, moz:profile: C:\Users\User\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), se:cdp: ws://localhost:49415/devtoo..., se:cdpVersion: 85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: fde45495-be0b-4d7f-8b9a-9d72030e7bd7
-	at work.selenium.tests.TasksTest.testThatTaskCreated(TasksTest.java:20)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 58.043 s - in TestSuite
