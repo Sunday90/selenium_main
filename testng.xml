@@ -4,7 +4,7 @@
     <parameter name="browser" value="chrome"></parameter>
     <parameter name="version" value="100"></parameter>
     <parameter name="url" value="https://newapp.workflowsoft.com/ru"></parameter>
-    <parameter name="local" value="true"></parameter>
+    <parameter name="local" value="false"></parameter>
     <test name="Base tests" preserve-order="true" enabled="true">
         <classes>
             <class name="work.selenium.tests.LoginTest"></class>

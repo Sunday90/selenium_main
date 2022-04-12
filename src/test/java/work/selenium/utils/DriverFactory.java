@@ -12,22 +12,28 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 public class DriverFactory {
     private static WebDriver driver;
     private static final String LOCAL_DRIVER_PATH = "src/test/resources/";
     private static File file;
 
+
+    //Подготовка Selenoid веб-драйвера
     public static WebDriver getRemoteDriver(String platform, String browser, String version) {
-        FirefoxOptions options = new FirefoxOptions();
-        options.setCapability("platformName", platform);
-        options.setCapability("browserName", browser);
-        options.setCapability("browserVersion", version);
-        options.setBinary("C:\\selenium-grid\\");
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+        desiredCapabilities.setBrowserName(browser);
+        desiredCapabilities.setVersion(version);
+        Map<String, Object> options = new HashMap<>();
+        options.put("enableVNC", true);
+        options.put("enableVideo", true);
+        desiredCapabilities.setCapability("selenoid:options", options);
 
         try {
-            driver = new RemoteWebDriver(new URL("http://192.168.0.9:4444/wd/hub"), options);
+            driver = new RemoteWebDriver(new URL("http://51.250.101.193:4444/wd/hub"), desiredCapabilities);
         }
         catch (MalformedURLException e) {
             e.printStackTrace();
@@ -37,6 +43,7 @@ public class DriverFactory {
     }
 
 
+    //Подготовка локального веб-драйвера
     public static WebDriver getLocalDriver(String browser) {
         Browser b = Browser.valueOf(browser.toUpperCase(Locale.ROOT));
         switch (b) {
